@@ -1,0 +1,12 @@
+﻿#site-header,
+#site-footer,
+#site-top-bar,
+#site-banner,
+.menu-label,
+nav,
+body.menu .site.menu,
+.noprint {
+    display: none;
+}
+
+a:link:after, a:visited:after { content:" [" attr(href) "] "; text-decoration:none; display:inline-block; } /* show urls */

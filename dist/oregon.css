@@ -1,0 +1,275 @@
+﻿/* Oregon styles */
+html {
+    min-height: 100%;
+    position: relative; /* for sticky footer */
+}
+
+body {
+    margin-bottom: 55px; /* 35px for footer + some extra margin */
+    font-family: Arial, Helvetica, san-serif;
+    font-size: 14px;
+    background: url('themeimages/watermark.png?v=20151016') no-repeat fixed 50% 100%;    
+}
+
+#site-top-bar {
+    width: 100%;
+    height: auto;
+    background-color: #43526c;
+    color: #fff;
+    border-bottom: 1px solid #25344E;
+}
+
+#site-logo {
+    display: block;
+    width: 158px;
+    height: 50px;
+    margin: 0 auto;
+    background: #43526C url('themeimages/logo.png?v=20151016') no-repeat center center;
+}
+
+
+/* Top menu */
+#site-top-menu {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 220px;
+    min-height: 34px;
+    height: auto;
+    max-height: calc(100vh - 89px);
+    border: 1px solid black;
+    background-color: white;
+    z-index: 9999;
+    overflow-y: auto;
+    list-style-type:none !important;
+    box-shadow: -2px 2px 15px rgba(64,64,64,.65);
+}
+#site-top-menu a {
+    margin: 0;
+}
+
+/* clearfix to contain floated menu elements */
+#site-main-menu > ul:after 
+{
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
+}
+
+
+#site-login-links {
+    line-height:30px;
+    color:#fff;
+    background-color: #43526c;
+    text-align: center;
+    border-top: 1px solid #25344E;
+    clear: both;
+}
+#site-login-links form {
+    display:inline-block;
+}
+#site-login-links a {
+    color:#fff;
+}
+
+/* Style buttons in site login links as a link */
+#site-login-links button, 
+#site-login-links button:focus, 
+#site-login-links button:active {
+    /* Remove all decorations to look like normal text */
+    background: none;
+    border: none;
+    display: inline;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    outline-offset: 0;
+    /* Additional styles to look like a link */
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Remove extra space inside buttons in Firefox */
+#site-login-links button::-moz-focus-inner {
+    border: none;
+    padding: 0;
+}
+
+/* Image banner - don't show in mobile view */
+#site-banner {
+}
+
+#site-header {
+    margin-left: 50px; /* make room for hamburger icon */
+}
+
+#site-content {
+    padding: 0 10px;
+    border-top: 1px solid #e1e1e1;
+    box-sizing: border-box;
+}
+
+/* All menus */
+.site-menu ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+    list-style-position:inside;
+}
+.site-menu li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.site-menu a {
+    margin:0;
+    display:block;
+    padding: 4px 20px;
+    color: #000;
+    line-height: 26px;
+    text-decoration: none;
+}
+.site-menu > ul ul a {
+    font-weight:normal;
+}
+.site-menu > ul ul li a:before {
+     content: '';
+     width:8px; /* gives indent for nested menus*/
+     display:inline-block;
+}
+.site-menu > ul ul li li a:before {
+    padding-left:10px;
+}
+.site-menu > ul ul li li li a:before {
+    padding-left:20px;
+}
+.site-menu li:hover > a:hover,
+.site-menu ul a:hover
+{
+    background: rgba(67, 82, 108, 0.85);
+    color: white;
+}
+.site-menu hr {
+    margin:2px 5px;
+    border:0;
+    border-top:1px solid #888;
+    border-bottom:1px solid #fff;
+}
+
+/* Accessible, collapsible menus for mobile */
+#site-secondary-menu {
+    width: 220px;
+    max-width: 93vw;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background: url('themeimages/texture.png?v=20151016');
+    padding: 8px 0;
+    border-radius: 8px;
+
+    position: absolute;
+    z-index: 1000;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+#site-secondary-menu a {
+    margin: 0;
+}
+
+#site-secondary-menu  a:hover {
+    background: rgba(67, 82, 108, 0.75);
+    color: white;
+}
+
+label.menu-label {
+    margin-right: 10px;
+    display:block;
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    border-radius: 5px;
+    cursor:pointer;
+    -webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+#site-top-bar label.menu-label {
+    float: right;
+    background-color:#43526c;
+    color:#fff;
+    border: 2px solid white;
+    margin-top: -42px;
+}
+
+#site-body label.menu-label {
+    float: left;
+    background-color:white;
+    color:black;
+    border: 2px solid black;
+    margin-top: -52px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+label.menu-label:before {
+    content: "\2261";
+    font-size: 34px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color:#fff;
+}
+#site-body label.menu-label:before {
+    color:#000;
+}
+.site-menu-cbx:checked + .site-menu {
+    display: none;
+}
+
+.site-menu-cbx:focus + label.menu-label {
+    border:1px dotted #fff;
+    padding:0 19px;
+}
+
+/* footer */
+#site-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35px; /* fixed height footer */
+    font-size: 12px;
+    z-index: 20;
+    background: #43526c;
+    background: linear-gradient(#495975,  #3c4a61);
+    box-shadow: 0 -1px 15px rgba(0, 0, 0, 0.5);
+}
+#site-footer > .footercontainer {
+    line-height: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Footer links */
+#site-footer ul {
+    padding: 0;
+    margin: 0;
+}
+#site-footer li {
+    display: inline;
+    color: #fff;
+}
+#site-footer li:before {
+    display: inline-block;
+    content: "\2022"; /* bullet */
+    padding: 0 7px 0 4px;
+}
+#site-footer li:first-child:before {
+    content: "";
+}
+#site-footer li a {
+    color: inherit;
+}

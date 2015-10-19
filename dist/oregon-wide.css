@@ -1,0 +1,244 @@
+﻿/* force body to contain floats */
+body:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+#site-top-bar-center {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #43526C;
+}
+
+#site-logo {
+    float: left;
+    margin: 0;
+    margin-right: 20px;
+}
+
+#site-main-menu /*nav*/ {
+    max-width: 1200px;
+    z-index: 250000;
+    min-height: 50px;
+}
+
+/* Top menu */
+#site-top-menu {
+    overflow: visible;
+    position: static;
+    min-height: 50px;
+    height: auto;
+    width: auto;
+    border: 0;
+    background-color: #43526C;
+    padding: 1px 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: auto 0;
+    box-shadow: none;
+}
+
+#site-top-menu > li:first-child:before {
+    border-right: 1px solid #394862;
+    content: '';
+    width: 0;
+    left: -1px;
+    height: 50px;
+    position: absolute;
+}
+
+#site-top-menu > li:last-child:after {
+    border-right: 1px solid #4D5C76;
+    content: '';
+    width: 0;
+    top: 0;
+    right: -1px;
+    height: 50px;
+    position: absolute;
+}
+
+#site-top-menu li {
+    float: left;
+    list-style-type: none !important;
+    margin-left: 0;
+}
+
+#site-top-menu > li > a {
+    border-left: 1px solid #4D5C76;
+    border-right: 1px solid #394862;
+}
+
+#site-top-menu a {
+    color: #fff;
+    padding: 0 20px;
+    line-height: 50px;
+}
+
+#site-top-menu ul li a:before {
+    content: '';
+    width: 0;
+    display: inline;
+    padding-left: 0 !important;
+}
+/* Arrows for drop-down/fly-out */
+#site-top-menu li > a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 5px;
+    top: calc(50% - 5px);
+    border: 5px solid transparent;
+    border-left-color: #000;
+}
+
+#site-top-menu li:hover > a:after {
+    border-left-color: #fff;
+}
+
+#site-top-menu > li > a:after {
+    border-left-color: transparent;
+    border-top-color: #FFF;
+    top: 35px;
+    left: calc(50% - 5px);
+}
+
+#site-top-menu > li:hover > a:after {
+    border-left-color: transparent;
+}
+
+#site-top-menu li > a:only-child:after {
+    display: none;
+}
+
+#site-top-menu li:hover > a {
+    color: #fafafa;
+    background: rgba(67, 82, 108, 0.75);
+    background: linear-gradient(#495975, #3c4a61);
+}
+
+#site-top-menu li:hover > ul {
+    display: block;
+}
+
+/* Sub-menu */
+#site-top-menu ul {
+    padding: 0;
+    margin-left: 0;
+    display: none;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    z-index: 250999;
+    box-shadow: 1px 1px 7px rgba(64,64,64,.65);
+    background: #EDEFEE;
+}
+
+#site-top-menu ul ul {
+    top: 0;
+    left: 140px;
+}
+
+#site-top-menu ul li {
+    float: none;
+}
+
+#site-top-menu ul a {
+    line-height: 50px;
+    width: 145px;
+    color: black;
+}
+
+#site-top-menu li:hover > a:hover,
+#site-top-menu ul a:hover {
+    background: #43526c;
+    background: linear-gradient(#495975, #3c4a61);
+}
+
+#site-login-links {
+    clear: both;
+    background-color: rgba(67, 82, 108, 0.75);
+    line-height: 50px;
+    right: 0;
+    margin-top: 0;
+    padding: 0 15px;
+    position: absolute;
+    z-index: 500;
+    border-top: none;
+}
+
+#site-banner {
+    clear: both;
+    background: url('themeimages/splash.jpg?v=20151016') no-repeat scroll top;
+    background-size: cover;
+    position: relative;
+    z-index: -10;
+    width: auto;
+    height: calc(100vh / 3);
+    max-height: 300px;
+    border-bottom-width: 5px;
+    display: block;
+}
+
+#site-header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+}
+
+#site-name {
+    margin-left: 10px;
+}
+
+#site-body {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+#site-secondary-menu {
+    clear: both;
+    float: left;
+    margin-left: 10px;
+    margin-right: -230px;
+
+    position: static;
+    box-shadow: none;
+}
+
+#site-center-area {
+    float: left;
+    width: 100%;
+}
+
+#site-center-area.has-side-menu /* makes room in #site-center-area when global menu defined*/ {
+    margin-left: 230px;
+    max-width: 970px; /* 1200px - 230px */
+}
+
+/* for sections displayed as table */
+.wide.table {
+    display: table;
+}
+
+.wide.table.row {
+    display: table-row;
+}
+
+.wide.table.row > div {
+    display: table-cell;
+}
+
+/* affect all types of menus */
+label.menu-label {
+    display: none;
+}
+
+.site-menu {
+    display: block !important;
+}
